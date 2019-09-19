@@ -9,7 +9,7 @@ def read(filename):
 long_description = read('README.md')
 
 setuptools.setup(
-    name = 'my-package',
+    name = 'edc2019-demo-package',
     author = 'mechazawa',
     author_email = 'mech@equinor.com',
     description = 'my brilliant package',
