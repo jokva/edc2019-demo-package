@@ -11,3 +11,13 @@ install:
 script:
   - pytest
   - python setup.py bdist_wheel
+
+deploy:
+    - provider: pypi
+      skip_existing: true
+      distributions: bdist_wheel
+      user: edc2019
+      password:
+        secure: TkO8CZ3ZSxYzMBOHd1Q8dvUMzz8PaXkdmjkun57zwSl+HA8kGv8G401sgIkLCQMcYSamCo3vrcBAEfO5+Etv3cF2a+R14nsCqx3tUOXinmOJFtpw7QyR/XEzS9K41cX1OjcVWJvlfqUtKBrBXRfZ0DO/vuh5R0ubQuxfh8a3o1ksW1RfpGDa9te6BRgGbS9h6xvg9TAxjX3rXHSfKxzgegTqlV3QmkDRXJHq+fopLLpbfTlP6lQab/h634EgKMmpF3Kuok+a43IQyufn/NlYlC1cA20do9M+xs3fKh0I4254gs/WmPPAA4w778tNt1Y4nt4YwA9M/9ZM17LkKkYZGQEbN34oveBpZyyJdhy95V0nr64hC1TfdL6A7TyZE1M+JhOkYU2NoY/sQosWoRlfvQ5V3puHLukJP8+0Ac1AefzYfZ+uWuByzyh89NCQwwCccjQHNTxKPy6/GM6PzUmI8Z0RTb/QWrtvqHpySv2FwvG0n89waGXQ7jVqAlSrWIUjuMdENfttUJqcluuPyjAM2NEMVycFUq3iuo2ibcfY40juvtVVP+xM0lkau98EEZ+dVnw6+o4H4iWioZso6uB0SrUyEHGsNgMoWtcwoAC0o9K34W3vF9bQiJmNHGD7+ags98Z1+g0F1mtUzqSx7JyTBXQ8Knfo4La4K4w4r/ecSiw=
+      on:
+        tags: true
